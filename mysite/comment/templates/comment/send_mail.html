@@ -1,3 +1,5 @@
-{{ comment_text|safe }}
+﻿{% autoescape off %}
+{{ comment_text }}
 <br>
 <a href="http://localhost:8000{{ url }}">点击查看</a>
+{% endautoescape %}

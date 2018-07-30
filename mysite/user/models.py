@@ -7,7 +7,7 @@ class Profile(models.Model):
     nickname = models.CharField(max_length=20, verbose_name='昵称')
 
     def __str__(self):
-        return '<Profile:%s for %s>' % (self.user.username, self.nickname)
+        return '<Profile:%s for %s>' % (self.nickname, self.user.username)
 
 def get_nickname(self):
     if Profile.objects.filter(user=self).exists():
